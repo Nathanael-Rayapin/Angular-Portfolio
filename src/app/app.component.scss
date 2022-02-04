@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab+Highlight&display=swap');
+
+*,*:before,*:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    position: relative;
+    z-index: 10;
+    background-color: rgba(102, 102, 102, 0.616);
+    overflow: hidden;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.navbar a:not(.navbar-brand) {
+    color: #fff;
+    font-weight: 400;
+    cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.navbar a:hover {
+    color: #000;
+}
+
+span.navbar-brand {
+    font-family: 'Zilla Slab Highlight', cursive;
+    color: #fff;
+    font-size: 25px;
+}
+
+// Title
+.title {
+    position: relative;
+    font-size: 80px;
+    z-index: 10;
+}
+
+.title span {
+    font-size: 50px;
+}
+
+@media screen and (max-width: 768px) {
+    .title {
+        font-size: 40px;
+    }
+
+    .title span {
+        font-size: 20px;
+    }
+  }
+
+
+
+// Footer
+@media screen and (min-width: 500px) and (max-width: 576px) {
+    .footer-distributed p {
+        font-size: 12px;
+    } 
+
+    .footer-distributed p a{
+        font-size: 12px;
+    } 
+  }
+// Left
+.footer-distributed {
+    position: relative;
+}
+
+.footer-distributed p, .footer-distributed p a, .footer-distributed .bi-envelope {
+    position: relative;
+    z-index: 2;
+}
+
+.footer-distributed hr {
+    color: #fff;
+    margin-bottom: 1em;
+}
+
+.footer-distributed img {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.footer-left p a {
+    text-decoration: none;
+    color: #fff;
+    transition: all .5s;
+}
+
+// .footer-left p a:hover {
+//     margin-left: 2rem;
+// }
+
+// Center
+.footer-center p {
+    color: #fff;
+}
+
+.footer-center .message p a {
+    text-decoration: none;
+}
+
+@media screen and (min-width: 500px) and (max-width: 576px) {
+    .bi-geo-alt-fill, .bi-telephone-fill, .bi-envelope {
+        width: 18px;
+    } 
+  }
+
+// Right
+.footer-right .btn {
+    position: relative;
+    z-index: 10;
+    width: 10em;
+    border-radius: 25px;
+    font-size: 18px;
+}
+
+  
