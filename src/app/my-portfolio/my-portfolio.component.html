@@ -183,9 +183,7 @@
             </div>
         </div>
         <!-- Loading -->
-        <div class="loading w-100 h-100">
-            <mat-progress-spinner class="loader" [mode]="'indeterminate'" *ngIf="loading$ | async">
-            </mat-progress-spinner>
-        </div>
+        <mat-progress-spinner class="loading" [mode]="'indeterminate'" *ngIf="loading$ | async">
+        </mat-progress-spinner>
     </div>
 </div>
