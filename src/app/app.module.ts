@@ -17,6 +17,7 @@ import { FormsModule } from '@angular/forms';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { ViewMyCvComponent } from './view-my-cv/view-my-cv.component';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { ViewMyCvComponent } from './view-my-cv/view-my-cv.component';
     MatSnackBarModule,
     FormsModule,
     MatProgressBarModule,
-    PdfViewerModule
+    PdfViewerModule,
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

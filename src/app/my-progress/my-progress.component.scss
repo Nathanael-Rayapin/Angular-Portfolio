@@ -80,3 +80,12 @@ img.wave {
     color: rgb(66, 66, 66);
     border-radius: 50%;
 }
+
+// Loader
+.loading {
+    position: fixed;
+    left: 50%;
+    margin-left: -4em;
+    top: 35%;
+    z-index: 1000;
+}

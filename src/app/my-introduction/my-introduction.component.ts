@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LoadingService } from '../service/loading.service';
 
 @Component({
   selector: 'app-my-introduction',
@@ -6,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./my-introduction.component.scss']
 })
 export class MyIntroductionComponent implements OnInit {
+  // Loading
+  loading$ = this.loader.loading$;
 
-  constructor() { }
+  constructor(public loader: LoadingService) {}
 
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.loader.show();
+    setTimeout(() => {
+      this.loader.hide();
+    }, 1000);
+  }
 }

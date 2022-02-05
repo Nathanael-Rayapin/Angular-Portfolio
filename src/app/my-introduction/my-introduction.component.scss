@@ -96,3 +96,13 @@ img.wave {
         border-radius: 20px;
     }
 }
+
+// Loader
+.loading {
+    position: fixed;
+    left: 50%;
+    margin-left: -4em;
+    top: 35%;
+    z-index: 1000;
+}
+
