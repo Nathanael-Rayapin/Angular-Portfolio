@@ -1,9 +1,10 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { FirebaseTSApp } from 'firebasets/firebasetsApp/firebaseTSApp';
 import { Subscription } from 'rxjs';
-import { PageAnimation } from './animation/page-animation';
-import { slideInAnimation } from './animation/router-animation';
+import { PageAnimation } from './animation/page-animation';;
 import { AnimationService } from './service/animation.service';
+import { FirebaseService } from './service/firebase.service';
 
 @Component({
   selector: 'app-root',
@@ -12,6 +13,7 @@ import { AnimationService } from './service/animation.service';
   animations: [PageAnimation]
 })
 export class AppComponent implements OnInit, OnDestroy {
+  durationInSeconds: number = 5;
   title = 'Portfolio';
   // Subscription Animation Navbar
   defaultSubNavIntro: Subscription;
@@ -33,7 +35,9 @@ export class AppComponent implements OnInit, OnDestroy {
   defaultTitlePortfo: string = 'pstart';
   defaultTitleNext: string = 'nstart';
 
-  constructor(private animationService: AnimationService) {}
+  constructor(private animationService: AnimationService,
+    private firebaseService: FirebaseService,
+    private _snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
     // Nav
@@ -86,8 +90,40 @@ export class AppComponent implements OnInit, OnDestroy {
     this.animationService.toChangeNext();
   }
 
-  prepareRoute(outlet: RouterOutlet) {
-    return outlet?.activatedRouteData?.['animation'];
+  onSendMessage(emailInput: HTMLInputElement, messageInput: HTMLTextAreaElement) {
+    let emailUser = emailInput.value;
+    let messageUser = messageInput.value;
+    let emailId = this.firebaseService.firestore.genDocId();
+    if(this.isNotEmpty(emailUser) && this.isNotEmpty(messageUser)) {
+      this.firebaseService.firestore.create(
+        {
+          path: ['Contact', emailId],
+          data: {
+            email: emailUser,
+            message: messageUser,
+            timestamp: FirebaseTSApp.getFirestoreTimestamp()
+          },
+          onComplete: (valid) => {
+            this._snackBar.open('Your message has been successfully sent', 'Close', {
+              duration: this.durationInSeconds * 1000,
+            });
+            emailInput.value = "";
+            messageInput.value = "";
+          },
+          onFail: (err) => {
+            alert(err);
+          }
+        }
+      );
+    } else {
+      this._snackBar.open('Please fill in the two fields above', 'Close', {
+        duration: this.durationInSeconds * 1000,
+      });
+    }
+  }
+
+  isNotEmpty(text: string) {
+    return text !== null && text.length > 0;
   }
 
   ngOnDestroy(): void {

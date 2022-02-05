@@ -2,23 +2,29 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { IntroductionComponent } from './introduction/introduction.component';
-import { CompetenceComponent } from './competence/competence.component';
-import { PortfolioComponent } from './portfolio/portfolio.component';
-import { NextStepComponent } from './next-step/next-step.component';
+import { MyIntroductionComponent } from './my-introduction/my-introduction.component';
+import { MyPortfolioComponent } from './my-portfolio/my-portfolio.component';
+import { MyProgressComponent } from './my-progress/my-progress.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { FirebaseTSApp } from 'firebasets/firebasetsApp/firebaseTSApp';
+import { environment } from 'src/environments/environment';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { FormsModule } from '@angular/forms';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
+import { ViewMyCvComponent } from './view-my-cv/view-my-cv.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    IntroductionComponent,
-    CompetenceComponent,
-    PortfolioComponent,
-    NextStepComponent
+    MyIntroductionComponent,
+    MyPortfolioComponent,
+    MyProgressComponent,
+    ViewMyCvComponent
   ],
   imports: [
     BrowserModule,
@@ -27,9 +33,17 @@ import { MatGridListModule } from '@angular/material/grid-list';
     MatDialogModule,
     MatFormFieldModule,
     BrowserAnimationsModule,
-    MatGridListModule
+    MatGridListModule,
+    MatSnackBarModule,
+    FormsModule,
+    MatProgressBarModule,
+    PdfViewerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor() {
+    FirebaseTSApp.init(environment.firebaseConfig);
+  }
+ }

@@ -42,29 +42,27 @@ img.wave {
     object-position: center;
 }
 
-.storie {
+.story {
     position: relative;
 }
 
-.storie p:nth-of-type(1), .storie p:nth-of-type(2) {
+.story p:nth-of-type(1), .story p:nth-of-type(2) {
     text-align: justify;
 }
 
-.storie a {
+.story a {
     text-decoration: none;
 }
 
 @media screen and (min-width: 1201px) {
-    .storie .socialIcon {
+    .story .socialIcon {
         position: absolute;
         bottom: 0;
         left: 0;
     }
 }
 
-
-
-.storie .socialIcon a {
+.story .socialIcon a {
     color: #000;
 }
 
@@ -85,4 +83,16 @@ img.wave {
 .socialIcon .github:hover .bi-github {
     color: rgb(66, 66, 66);
     border-radius: 50%;
+}
+
+
+
+@media screen and (min-width: 1201px) {
+    .curriculum  button {
+        position: absolute;
+        right: 3em;
+        bottom: .4rem;
+        width: 10em;
+        border-radius: 20px;
+    }
 }

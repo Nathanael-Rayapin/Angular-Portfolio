@@ -11,8 +11,8 @@ export const PageAnimation = [
             transform: 'translateY(-550%)',
             transition: 'all .3s'
         }))
-      ]),
-      trigger('introTitleState', [
+    ]),
+    trigger('introTitleState', [
         state('istart', style({
             opacity: '0',
             position: 'relative',
@@ -25,7 +25,7 @@ export const PageAnimation = [
             top: '0',
             transition: 'all .4s'
         }))
-      ]),
+    ]),
     // Portfolio
     trigger('portfoNavState', [
         state('pstatic', style({
@@ -36,8 +36,8 @@ export const PageAnimation = [
             transform: 'translateY(-550%)',
             transition: 'all .3s'
         }))
-      ]),
-      trigger('portfoTitleState', [
+    ]),
+    trigger('portfoTitleState', [
         state('pstart', style({
             opacity: '0',
             position: 'relative',
@@ -50,7 +50,7 @@ export const PageAnimation = [
             top: '-6rem',
             transition: 'all .4s'
         }))
-      ]),
+    ]),
     // Next-Step
     trigger('nextNavState', [
         state('nstatic', style({
@@ -61,8 +61,8 @@ export const PageAnimation = [
             transform: 'translateY(-550%)',
             transition: 'all .3s'
         }))
-      ]),
-      trigger('nextTitleState', [
+    ]),
+    trigger('nextTitleState', [
         state('nstart', style({
             opacity: '0',
             position: 'relative',
@@ -75,5 +75,5 @@ export const PageAnimation = [
             top: '-12rem',
             transition: 'all .4s'
         }))
-      ])
+    ])
 ]

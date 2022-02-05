@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { IntroductionComponent } from './introduction/introduction.component';
-import { NextStepComponent } from './next-step/next-step.component';
-import { PortfolioComponent } from './portfolio/portfolio.component';
+import { MyIntroductionComponent } from './my-introduction/my-introduction.component';
+import { MyProgressComponent } from './my-progress/my-progress.component';
+import { MyPortfolioComponent } from './my-portfolio/my-portfolio.component';
 
 const routes: Routes = [
   { path: '', redirectTo: "introduction", pathMatch: 'full' },
-  { path: 'introduction', component: IntroductionComponent },
-  { path: 'portfolio', component: PortfolioComponent },
-  { path: 'nextstep', component: NextStepComponent }
+  { path: 'introduction', component: MyIntroductionComponent },
+  { path: 'portfolio', component: MyPortfolioComponent },
+  { path: 'nextstep', component: MyProgressComponent }
 ];
 
 @NgModule({
