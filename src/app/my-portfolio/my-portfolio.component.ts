@@ -1,12 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { PageAnimation } from '../animation/page-animation';
 import { LoadingService } from '../service/loading.service';
 
 @Component({
   selector: 'app-my-portfolio',
   templateUrl: './my-portfolio.component.html',
-  styleUrls: ['./my-portfolio.component.scss'],
-  animations: [PageAnimation]
+  styleUrls: ['./my-portfolio.component.scss']
 })
 export class MyPortfolioComponent implements OnInit {
   // Loading

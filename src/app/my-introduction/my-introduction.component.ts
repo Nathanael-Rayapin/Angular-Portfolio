@@ -10,8 +10,7 @@ export class MyIntroductionComponent implements OnInit {
   // Loading
   loading$ = this.loader.loading$;
 
-  constructor(public loader: LoadingService) {}
-
+  constructor(public loader: LoadingService) { }
 
   ngOnInit(): void {
     this.loader.show();

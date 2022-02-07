@@ -1,4 +1,5 @@
 <div class="app">
+  <!-- Navbar -->
   <nav class="navbar navbar-expand-sm py-4 px-5 mt-5">
     <div class="container-fluid">
       <span class="navbar-brand" href="#">Nathanaël</span>
@@ -15,24 +16,20 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/']" [@introNavState]="defaultNavIntro"
-              (click)="toIntroState()">Introduction</a>
+            <a class="nav-link" [routerLink]="['/introduction']" routerLinkActive="sectionActive" >Introduction</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/portfolio']" [@portfoNavState]="defaultNavPortfo"
-              (click)="toPortfoState()">Portfolio</a>
+            <a class="nav-link" [routerLink]="['/portfolio']" routerLinkActive="sectionActive">Portfolio</a>
           </li>
           <li class="nav-ite">
-            <a class="nav-link" [routerLink]="['/nextstep']" [@nextNavState]="defaultNavNext"
-              (click)="toNextState()">Progress</a>
+            <a class="nav-link" [routerLink]="['/nextstep']" routerLinkActive="sectionActive">Progress</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
-  <h1 class="title text-center text-white mt-5">Angular<br>Web Developper<br><span
-      [@introTitleState]="defaultTitleIntro">- Introduction -</span><br><span [@portfoTitleState]="defaultTitlePortfo">-
-      Portfolio -</span><br><span [@nextTitleState]="defaultTitleNext">- Next-Step- </span></h1>
+  <!-- Router -->
+  <h1 class="title text-center text-white mt-5">Angular<br>Web Developper</h1>
   <div class="container-fluid w-100 h-100">
     <router-outlet></router-outlet>
   </div>
@@ -80,19 +77,11 @@
       <div class="footer-right d-none d-xl-block col-xl-4 ">
         <form>
           <div class="form-group mb-4">
-            <input 
-            #emailInput 
-            name="email" 
-            type="email" 
-            class="form-control p-2"
-            placeholder="Your email...">
+            <input #emailInput name="email" type="email" class="form-control p-2" placeholder="Your email...">
           </div>
           <div class="form-group mb-4">
-            <textarea  
-            #messageInput 
-            name="message" 
-            placeholder="Your message..."
-            class="form-control p-2" id="" cols="30" rows="5"></textarea>
+            <textarea #messageInput name="message" placeholder="Your message..." class="form-control p-2" id=""
+              cols="30" rows="5"></textarea>
           </div>
           <div class="form-group text-end">
             <button type="button" class="btn btn-primary p-2"
@@ -101,6 +90,8 @@
         </form>
       </div>
     </div>
-    <img src="https://firebasestorage.googleapis.com/v0/b/portfoliocontact-5aed8.appspot.com/o/App%2FWaveFooter.png?alt=media&token=84424ee3-4dd4-4a29-bb9d-78b880b74881" alt="">
+    <img
+      src="https://firebasestorage.googleapis.com/v0/b/portfoliocontact-5aed8.appspot.com/o/App%2FWaveFooter.png?alt=media&token=84424ee3-4dd4-4a29-bb9d-78b880b74881"
+      alt="">
   </footer>
 </div>

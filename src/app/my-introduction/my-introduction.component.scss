@@ -18,20 +18,20 @@ img.keyboardBG {
     filter: blur(2px)
 }
 
-// Main Page
 img.wave {
     position: relative;
+    margin-top: 15.8em;
 }
 
 @media screen and (max-width: 768px) {
     img.wave {
-        margin-top: 17em;
+        margin-top: 26em;
     }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1200px) {
     img.wave {
-        margin-top: 1em;
+        margin-top: 18em;
     }
 }
 
@@ -42,6 +42,7 @@ img.wave {
     object-position: center;
 }
 
+// Course
 .story {
     position: relative;
 }
@@ -85,18 +86,6 @@ img.wave {
     border-radius: 50%;
 }
 
-
-
-@media screen and (min-width: 1201px) {
-    .curriculum  button {
-        position: absolute;
-        right: 3em;
-        bottom: .4rem;
-        width: 10em;
-        border-radius: 20px;
-    }
-}
-
   // Loader
   .loading {
     position: fixed;
@@ -105,4 +94,3 @@ img.wave {
     top: 35%;
     z-index: 1000;
 }
-

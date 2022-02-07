@@ -6,6 +6,7 @@
     padding: 0;
 }
 
+// Navbar
 .navbar {
     position: relative;
     z-index: 10;
@@ -34,7 +35,11 @@ span.navbar-brand {
     font-size: 25px;
 }
 
-// Title
+.sectionActive {
+    background: #212529;
+}
+
+// Router
 .title {
     position: relative;
     font-size: 80px;
@@ -67,7 +72,7 @@ span.navbar-brand {
         font-size: 12px;
     } 
   }
-// Left
+
 .footer-distributed {
     position: relative;
 }
@@ -97,11 +102,6 @@ span.navbar-brand {
     transition: all .5s;
 }
 
-// .footer-left p a:hover {
-//     margin-left: 2rem;
-// }
-
-// Center
 .footer-center p {
     color: #fff;
 }
@@ -116,7 +116,6 @@ span.navbar-brand {
     } 
   }
 
-// Right
 .footer-right .btn {
     position: relative;
     z-index: 10;
@@ -124,5 +123,3 @@ span.navbar-brand {
     border-radius: 25px;
     font-size: 18px;
 }
-
-  
