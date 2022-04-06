@@ -2,7 +2,7 @@
 
 ![This is an image](https://i.ibb.co/tKhWdvc/Portfolio-Angular.png)
 
-![This is an image](https://i.ibb.co/JQwJ6xS/Portfolio-Angular-Intro.png)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.4.
 
 ## Development server
