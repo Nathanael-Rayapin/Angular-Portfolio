@@ -1,5 +1,6 @@
 # Portfolio
 
+![This is an image](https://i.ibb.co/w6WBtKS/Portfolio-Angular.png)
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.4.
 
 ## Development server
