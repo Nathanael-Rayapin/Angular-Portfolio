@@ -2,7 +2,7 @@
 
 ![This is an image](https://i.ibb.co/tKhWdvc/Portfolio-Angular.png)
 
-<p align="center">This is one of my current Portoflio. Some modifications still need to be made to the animations but 99% of the content is there !</p>
+<p>This is one of my current Portoflio. Some modifications still need to be made to the animations but 99% of the content is there !</p>
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.4.
 
 ## Development server
